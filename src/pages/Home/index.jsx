@@ -239,11 +239,17 @@ function Home() {
             <p>
               Developed by <strong>Patricia Gea</strong> at <strong>Hyper Island, Stockholm</strong>
             </p>
-            <p className='github-link'>
-              <a href='https://github.com/PatriciaGea/Full-stack-user-registration-system' target='_blank' rel='noopener noreferrer'>
-                View on GitHub →
+            <div className='social-links'>
+              <a href='https://github.com/PatriciaGea' target='_blank' rel='noopener noreferrer' className='social-link'>
+                GitHub →
               </a>
-            </p>
+              <a href='https://www.linkedin.com/in/patriciageafrontend/' target='_blank' rel='noopener noreferrer' className='social-link'>
+                LinkedIn →
+              </a>
+              <a href='https://github.com/PatriciaGea/devClubCadastrouser' target='_blank' rel='noopener noreferrer' className='social-link'>
+                Project Repo →
+              </a>
+            </div>
           </div>
         </div>
       </section>

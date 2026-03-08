@@ -154,7 +154,7 @@ form input:focus {
 /* Info Section */
 .info-section {
   width: 100%;
-  background-color: rgba(46, 45, 78, 0.5);
+  background-color: transparent;
   padding: 40px 20px;
   margin-top: 40px;
 }
@@ -182,7 +182,7 @@ form input:focus {
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 35px;
   margin-bottom: 30px;
 }
 
@@ -190,7 +190,7 @@ form input:focus {
   background-color: #2E2D4E;
   border: 1px solid #8B8AE1;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   color: #ffffff;
 }
 
@@ -270,29 +270,39 @@ form input:focus {
 
 .info-footer {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
   border-top: 1px solid #8B8AE1;
   color: #b2b1df;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .info-footer strong {
   color: #ffffff;
 }
 
-.github-link {
-  margin-top: 10px;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
-.github-link a {
+.social-link {
   color: #8B8AE1;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.github-link a:hover {
+.social-link:hover {
   color: #6C63FF;
+  background-color: rgba(139, 138, 225, 0.1);
+  transform: translateY(-2px);
+}
 }
 
 /* Mobile Responsiveness */
