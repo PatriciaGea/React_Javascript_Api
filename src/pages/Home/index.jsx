@@ -193,6 +193,7 @@ function Home() {
               <h3>Technologies</h3>
               <div className='tech-list'>
                 <span className='tech-badge'>React 19.2.0</span>
+                <span className='tech-badge'>JavaScript ES6+</span>
                 <span className='tech-badge'>Vite 7.3.1</span>
                 <span className='tech-badge'>Node.js</span>
                 <span className='tech-badge'>Express 4.22.1</span>
