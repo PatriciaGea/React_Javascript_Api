@@ -112,28 +112,6 @@ npm run preview
 | POST | `/users` | Create new user |
 | DELETE | `/users/:id` | Delete user |
 
-### Example Requests
-
-```bash
-# Get all users
-curl http://localhost:3000/users
-
-# Search users
-curl "http://localhost:3000/users?name=John&age=25"
-
-# Create user
-curl -X POST http://localhost:3000/users \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "John Doe",
-    "email": "john@example.com",
-    "age": 25
-  }'
-
-# Delete user
-curl -X DELETE http://localhost:3000/users/[user-id]
-```
-
 **Response Codes:** 200 (Success) | 201 (Created) | 400 (Bad Request) | 404 (Not Found) | 500 (Server Error)
 
 ---
