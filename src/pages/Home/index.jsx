@@ -172,6 +172,81 @@ function Home() {
         </section>
       )}
 
+      <section className='info-section'>
+        <div className='info-container'>
+          <h2>About This Project</h2>
+          <p className='subtitle'>Full-stack user management system | React | Node.js | MongoDB | Express</p>
+          
+          <div className='info-grid'>
+            <article className='info-card'>
+              <h3>Features</h3>
+              <ul>
+                <li>Create, search, display, and delete user records</li>
+                <li>Real-time notifications with visual feedback</li>
+                <li>Form validation with error handling</li>
+                <li>Fully responsive (desktop, tablet, mobile)</li>
+                <li>RESTful API with CRUD operations</li>
+              </ul>
+            </article>
+
+            <article className='info-card'>
+              <h3>Technologies</h3>
+              <div className='tech-list'>
+                <span className='tech-badge'>React 19.2.0</span>
+                <span className='tech-badge'>Vite 7.3.1</span>
+                <span className='tech-badge'>Node.js</span>
+                <span className='tech-badge'>Express 4.22.1</span>
+                <span className='tech-badge'>MongoDB</span>
+                <span className='tech-badge'>Mongoose 8.22.1</span>
+                <span className='tech-badge'>Axios</span>
+                <span className='tech-badge'>CSS3 + HTML5</span>
+              </div>
+            </article>
+
+            <article className='info-card'>
+              <h3>API Documentation</h3>
+              <div className='api-docs'>
+                <p><strong>Base URL:</strong> http://localhost:3000</p>
+                <div className='api-endpoint'>
+                  <strong>GET</strong> <code>/users</code> - Get all users
+                </div>
+                <div className='api-endpoint'>
+                  <strong>GET</strong> <code>/users?name=X&email=Y&age=Z</code> - Search users
+                </div>
+                <div className='api-endpoint'>
+                  <strong>POST</strong> <code>/users</code> - Create new user
+                </div>
+                <div className='api-endpoint'>
+                  <strong>DELETE</strong> <code>/users/:id</code> - Delete user
+                </div>
+              </div>
+            </article>
+
+            <article className='info-card'>
+              <h3>Accessibility & SEO</h3>
+              <ul>
+                <li>WCAG 2.1 AA compliant</li>
+                <li>Semantic HTML structure</li>
+                <li>ARIA labels and live regions</li>
+                <li>Full keyboard navigation</li>
+                <li>Screen reader optimized</li>
+                <li>Mobile-friendly responsive design</li>
+              </ul>
+            </article>
+          </div>
+
+          <div className='info-footer'>
+            <p>
+              Developed by <strong>Patricia Gea</strong> at <strong>Hyper Island, Stockholm</strong>
+            </p>
+            <p className='github-link'>
+              <a href='https://github.com/PatriciaGea/Full-stack-user-registration-system' target='_blank' rel='noopener noreferrer'>
+                View on GitHub →
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
