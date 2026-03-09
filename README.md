@@ -15,6 +15,8 @@ A modern web app for managing user registrations built with React, Node.js, and 
 **Frontend:** https://patriciagea.github.io/React_Javascript_Api/  
 **Backend API:** https://react-javascript-api.onrender.com
 
+<img src="./src/assets/IMG_8875.jpeg" alt="Project screenshot" height="350px" />
+
 ---
 
 ## Table of Contents
