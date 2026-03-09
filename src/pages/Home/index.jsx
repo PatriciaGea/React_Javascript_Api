@@ -42,7 +42,7 @@ function Home() {
       setName('')
       setEmail('')
       setAge('')
-      await getUsers()
+      setUsers([])
     } catch (error) {
       showMessage('Error adding user')
     }
