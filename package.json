@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "npm --prefix api_users install ; npm --prefix api_users start",
     "lint": "eslint .",
     "preview": "vite preview"
   },
