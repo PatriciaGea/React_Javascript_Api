@@ -355,11 +355,12 @@ form input:focus {
   .button-group {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .button-group button {
-    width: 100%;
-    height: 45px;
+    width: 180px;
+    height: 42px;
   }
 
   .message {
@@ -406,6 +407,11 @@ form input:focus {
 
   .user-card {
     padding: 12px;
+  }
+
+  .button-group button {
+    width: 160px;
+    height: 40px;
   }
 
   .label {

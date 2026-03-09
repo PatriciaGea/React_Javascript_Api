@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './style.css'
 import Trash from '../../assets/trash.svg'
 import api from '../../services/api'
@@ -19,10 +19,6 @@ function Home() {
       showMessage('Error loading users')
     }
   }
-
-  useEffect(() => {
-    getUsers()
-  }, [])
 
   function showMessage(text) {
     setMessage(text)
