@@ -78,23 +78,27 @@ form input:focus {
 }
 
 .button-group {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .button-group button {
-  flex: 1;
   border-radius: 30px;
   border: none;
   background-color: #8B8AE1;
-  height: 40px;
+  width: 100%;
+  max-width: 180px;
+  height: 50px;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.2s;
 }
 
 .button-group button:hover {
   opacity: 0.8;
+  transform: translateY(-1px);
 }
 
 .btn-search {
@@ -353,14 +357,14 @@ form input:focus {
   }
 
   .button-group {
-    flex-direction: column;
     gap: 10px;
     align-items: center;
   }
 
   .button-group button {
-    width: 180px;
-    height: 42px;
+    max-width: none;
+    width: 100%;
+    height: 48px;
   }
 
   .message {
@@ -410,8 +414,8 @@ form input:focus {
   }
 
   .button-group button {
-    width: 160px;
-    height: 40px;
+    height: 46px;
+    font-size: 14px;
   }
 
   .label {
