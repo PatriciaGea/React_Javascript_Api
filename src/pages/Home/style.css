@@ -303,7 +303,6 @@ form input:focus {
   background-color: rgba(139, 138, 225, 0.1);
   transform: translateY(-2px);
 }
-}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
