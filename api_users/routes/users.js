@@ -8,13 +8,13 @@ const User = require("../models/user")
 
 router.post("/", async (req, res) => {
   try {
-    const { name, email } = req.body
-    if (!name || !email) return res.status(400).json({ message: "Name and email required" })
+    const { name, email, age } = req.body
+    if (!name || !email || !age) return res.status(400).json({ message: "Name, email and age required" })
 
     const userExists = await User.findOne({ email })
     if (userExists) return res.status(409).json({ message: "User already exists" })
 
-    const user = new User({ name, email })
+    const user = new User({ name, email, age: Number(age) })
     await user.save()
 
     res.status(201).json({ message: "User created successfully", userId: user._id })
@@ -27,10 +27,11 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const { name, email } = req.query
+    const { name, email, age } = req.query
     const filter = {}
-    if (name) filter.name = name
-    if (email) filter.email = email
+    if (name) filter.name = new RegExp(name, 'i')
+    if (email) filter.email = new RegExp(email, 'i')
+    if (age) filter.age = Number(age)
 
     const users = await User.find(filter)
     res.status(200).json(users)
@@ -55,12 +56,12 @@ router.get("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const { name, email } = req.body
-    if (!name && !email) return res.status(400).json({ message: "At least one field is required" })
+    const { name, email, age } = req.body
+    if (!name && !email && !age) return res.status(400).json({ message: "At least one field is required" })
 
     const user = await User.findByIdAndUpdate(
       req.params.id,
-      { ...(name && { name }), ...(email && { email }) },
+      { ...(name && { name }), ...(email && { email }), ...(age && { age: Number(age) }) },
       { new: true, runValidators: true }
     )
 
