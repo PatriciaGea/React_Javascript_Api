@@ -44,7 +44,7 @@
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 42px;
   text-align: center;
   color: #ffffff;
 }
@@ -55,7 +55,8 @@ form {
   gap: 30px;
   padding: 30px;
   border-radius: 10px;
-  background-color: #2E2D4E;
+  background-color: #24233f;
+  border: 1px solid #3a3961;
   max-width: 90%;
   width: 400px;
   margin-bottom: 20px
@@ -87,6 +88,7 @@ form input:focus {
   border-radius: 30px;
   border: none;
   background-color: #8B8AE1;
+  color: #ffffff;
   width: 100%;
   max-width: 180px;
   height: 50px;
@@ -341,7 +343,7 @@ form input:focus {
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   form {
@@ -398,7 +400,7 @@ form input:focus {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   form {
