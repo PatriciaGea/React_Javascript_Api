@@ -8,8 +8,12 @@
 
 > Full-stack user management application developed by **Patricia Gea** at **Hyper Island, Stockholm**
 
-
 A modern web app for managing user registrations built with React, Node.js, and MongoDB featuring a responsive design, real-time notifications, and accessibility-first approach.
+
+## 🚀 Live Demo
+
+**Frontend:** https://patriciagea.github.io/React_Javascript_Api/  
+**Backend API:** https://react-javascript-api.onrender.com
 
 ---
 
@@ -18,6 +22,7 @@ A modern web app for managing user registrations built with React, Node.js, and 
 - [Features](#-features)
 - [Technologies](#-technologies)
 - [Quick Start](#-quick-start)
+- [Deployment](#-deployment)
 - [API Documentation](#-api-documentation)
 - [Project Structure](#-project-structure)
 - [Accessibility & SEO](#-accessibility--seo)
@@ -49,7 +54,8 @@ A modern web app for managing user registrations built with React, Node.js, and 
 
 **Frontend:** React 19.2.0 | Vite 7.3.1 | Axios | CSS3 | HTML5  
 **Backend:** Node.js | Express.js 4.22.1 | MongoDB | Mongoose 8.22.1  
-**Tools:**  Git
+**Deployment:** GitHub Pages | Render | MongoDB Atlas  
+**Tools:** Git
 
 ---
 
@@ -78,7 +84,12 @@ Create `.env` in `api_users/`:
 ```env
 MONGODB_URI=mongodb://localhost:27017/usersdb
 PORT=3000
+CORS_ORIGINS=http://localhost:5173
 ```
+
+For production, set environment variables in:
+- **Render:** `MONGODB_URI`, `CORS_ORIGINS`
+- **GitHub Actions:** `VITE_API_URL`
 
 ### Running
 
@@ -101,16 +112,49 @@ npm run preview
 
 ---
 
+## 🌐 Deployment
+
+**Architecture:**
+```
+Frontend (GitHub Pages)
+  ↓ VITE_API_URL
+Backend (Render)
+  ↓ MONGODB_URI  
+Database (MongoDB Atlas)
+```
+
+### Deploy Frontend (GitHub Pages)
+
+1. Push to `main` branch
+2. GitHub Actions automatically builds and deploys
+3. Configure `VITE_API_URL` in repository variables
+
+### Deploy Backend (Render)
+
+1. Connect GitHub repository
+2. Render auto-deploys using `render.yaml`
+3. Set environment variables: `MONGODB_URI`, `CORS_ORIGINS`
+
+### Database (MongoDB Atlas)
+
+1. Create cluster and database
+2. Add network access (0.0.0.0/0 for Render)
+3. Copy connection string to `MONGODB_URI`
+
+---
+
 ## API Documentation
 
-**Base URL:** `http://localhost:3000`
+**Base URL (Production):** `https://react-javascript-api.onrender.com`  
+**Base URL (Local):** `http://localhost:3000`
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| GET | `/health` | Health check endpoint |
 | GET | `/users` | Get all users or search with query params |
-| GET | `/users?name=X&email=Y&age=Z` | Search users by fields |
-| POST | `/users` | Create new user |
-| DELETE | `/users/:id` | Delete user |
+| GET | `/users?name=X&email=Y&age=Z` | Search users by name, email, or age |
+| POST | `/users` | Create new user (requires name, email, age) |
+| DELETE | `/users/:id` | Delete user by ID |
 
 **Response Codes:** 200 (Success) | 201 (Created) | 400 (Bad Request) | 404 (Not Found) | 500 (Server Error)
 
