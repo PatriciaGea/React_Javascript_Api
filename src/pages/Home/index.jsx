@@ -11,9 +11,18 @@ function Home() {
   const [message, setMessage] = useState('')
 
   async function getUsers() {
-    const usersFromApi = await api.get('/users')
-    setUsers(usersFromApi.data)
+    try {
+      const usersFromApi = await api.get('/users')
+      setUsers(usersFromApi.data)
+    } catch (error) {
+      console.error('Error loading users:', error)
+      showMessage('Error loading users')
+    }
   }
+
+  useEffect(() => {
+    getUsers()
+  }, [])
 
   function showMessage(text) {
     setMessage(text)
