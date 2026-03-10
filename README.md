@@ -228,5 +228,5 @@ devClubCadastrouser/
 
 <div align="center">
 
-  <p>Portfolio • LinkedIn • GitHub • Email</p>
+ 
 </div>
